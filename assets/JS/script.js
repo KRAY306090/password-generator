@@ -1,5 +1,8 @@
 // Assignment code here
 var password = "";
+var generateBtn = document.querySelector("#generate");
+
+function writePassword () {
 
 var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowCase = "abcdefghijklmnopqrstuvwxyz";
@@ -32,8 +35,13 @@ if (specChar) {
 console.log(charList);
 
 var lengthChoice = window.prompt("Enter a password length 8-128 characters.");
+
+
+
+
+
 if (lengthChoice >= 8 && lengthChoice <= 128) {
-  window.alert("Thank you! See your password below");
+  
   for (var i = 0; i <= lengthChoice; i++) {
     password = password + charList.charAt(Math.floor(Math.random() * Math.floor(charList.length - 1)));
 }
@@ -44,11 +52,10 @@ else {
   window.alert("Invalid response. Please try again.");
 }
 
+document.getElementById("password").value = password;
+};
 
-
-
-
-
+generateBtn.addEventListener("click", writePassword);
 
 
 // Get references to the #generate element
