@@ -29,6 +29,16 @@ if (specChar) {
 
 console.log(charList);
 
+var lengthChoice = window.prompt("Enter a password length 8-128 characters.");
+if (lengthChoice >= 8 && lengthChoice <= 128) {
+  window.alert("Thank you! See your password below");
+}
+else {
+  window.alert("Invalid response. Please try again.");
+}
+
+
+
 
 // Get references to the #generate element
 //var generateBtn = document.querySelector("#generate");
