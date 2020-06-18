@@ -1,4 +1,6 @@
 // Assignment code here
+var password = "";
+
 var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowCase = "abcdefghijklmnopqrstuvwxyz";
 var number = "1234567890";
@@ -32,10 +34,19 @@ console.log(charList);
 var lengthChoice = window.prompt("Enter a password length 8-128 characters.");
 if (lengthChoice >= 8 && lengthChoice <= 128) {
   window.alert("Thank you! See your password below");
+  for (var i = 0; i <= lengthChoice; i++) {
+    password = password + charList.charAt(Math.floor(Math.random() * Math.floor(charList.length - 1)));
+}
+
+console.log(password);
 }
 else {
   window.alert("Invalid response. Please try again.");
 }
+
+
+
+
 
 
 
