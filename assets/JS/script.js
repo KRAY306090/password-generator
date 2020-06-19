@@ -1,17 +1,16 @@
 // initializes a global empty string variable to hold password
 var password = "";
-var generateBtn = document.querySelector("#generate");
 function writePassword () {
   // strings that hold strings of each character type
   var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowCase = "abcdefghijklmnopqrstuvwxyz";
   var number = "1234567890";
-  var special = "!@#$%&*"
+  var special = " !$#%&'()*+,-./:;<=>?@[]^_`{|}~";
   // prompts that allow user to choose which character types to include
-  var uCase = window.confirm("Do you want Uppercase?");
-  var lCase = window.confirm("Do you want lowercase?");
-  var num = window.confirm("Do youy want numbers?");
-  var specChar = window.confirm("Do you want special characters?");
+  var uCase = window.confirm("Do you want to include Uppercase letters? If not, select 'cancel'.");
+  var lCase = window.confirm("Do you want to include lowercase letters? If not, select 'cancel'.");
+  var num = window.confirm("Do you want to include numbers? If not, select 'cancel'.");
+  var specChar = window.confirm("Do you want to include special characters? If not, select 'cancel'.");
   // empty string that will hold desired characters
   var charList ="";
   // this will add a character string to the desired charcter string if its selected by the user
@@ -45,4 +44,5 @@ function writePassword () {
   document.getElementById("password").value = password;
 };
 // listens for click on button to run the function that generates a password
+var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
