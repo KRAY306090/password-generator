@@ -31,7 +31,7 @@ function writePassword () {
   // checks that user input is valid and not blank
   if (lengthChoice >= 8 && lengthChoice <= 128 && charList != "") {
     // adds one character per loop. Number of loops is set to the user input variable 'lengthChoice'
-    for (var i = 0; i <= lengthChoice; i++) {
+    for (var i = 0; i <= (lengthChoice - 1); i++) {
       // adds a random character to the current 'password' string each loop
       password = password + charList.charAt(Math.floor(Math.random() * Math.floor(charList.length - 1)));
     }
